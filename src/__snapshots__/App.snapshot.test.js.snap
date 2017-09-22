@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`app container dispatches correct actions upon rendering 1`] = `
+"function (dispatch) {
+    return _axios2.default.get(endpoint).
+    then(response => {
+      return dispatch({
+        type: _ActionTypes.GET_WEATHER_DONE,
+        payload: response.data });
+
+    }).
+    catch(error => {
+      return dispatch({
+        type: _ActionTypes.GET_WEATHER_ERROR,
+        payload: error.response.data,
+        statuscode: error.response.status });
+
+    });
+  }"
+`;
