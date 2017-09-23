@@ -6,7 +6,7 @@ import thunk from 'redux-thunk'
 import httpAdapter from 'axios/lib/adapters/http'
 import axios from 'axios'
 
-axios.defaults.host = 'http://api.openweathermap.org';
+axios.defaults.host = 'https://api.openweathermap.org';
 axios.defaults.adapter = httpAdapter;
 
 const mockStore = configureMockStore([thunk])
@@ -64,7 +64,7 @@ describe('actions', () => {
       "cod": 200
     }
 
-    nock('http://api.openweathermap.org')
+    nock('https://api.openweathermap.org')
     .get('/data/2.5/weather?q=London&appid=2a345681ddcde393253af927097f5747')
     .reply(200, mockedResponse)
 
@@ -90,7 +90,7 @@ describe('actions', () => {
       data: {"cod":401, "message": "Invalid API key. Please see http://openweathermap.org/faq#error401 for more info."}
     }
 
-    nock('http://api.openweathermap.org')
+    nock('https://api.openweathermap.org')
     .get('/data/2.5/weather?q=London&appid=2a345681ddcde393253af927097f5747')
     .reply(401, mockedResponse)
 

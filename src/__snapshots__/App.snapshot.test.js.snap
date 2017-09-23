@@ -1,20 +1,53 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`app container dispatches correct actions upon rendering 1`] = `
-"function (dispatch) {
-    return _axios2.default.get(endpoint).
-    then(response => {
-      return dispatch({
-        type: _ActionTypes.GET_WEATHER_DONE,
-        payload: response.data });
-
-    }).
-    catch(error => {
-      return dispatch({
-        type: _ActionTypes.GET_WEATHER_ERROR,
-        payload: error.response.data,
-        statuscode: error.response.status });
-
-    });
-  }"
+Array [
+  Object {
+    "args": Array [
+      Object {
+        "type": "fetching weather",
+      },
+    ],
+    "callId": 0,
+    "errorWithCallStack": [Error],
+    "exception": undefined,
+    "proxy": [Function],
+    "returnValue": Object {
+      "type": "fetching weather",
+    },
+    "thisValue": Object {
+      "dispatch": [Function],
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
+      },
+      "weatherReducer": Object {
+        "weather": Object {},
+      },
+    },
+  },
+]
 `;
