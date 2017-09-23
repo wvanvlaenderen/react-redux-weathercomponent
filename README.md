@@ -2,6 +2,8 @@
 
 My weather component is a simple React-redux example providing 100% test coverage for components, actions, and reducers using jest as a testrunner combining expect and snapshot testing.
 
+[Live demo ](https://wvanvlaenderen.github.io/react-redux-weathercomponent/) available at [https://wvanvlaenderen.github.io/react-redux-weathercomponent/](https://wvanvlaenderen.github.io/react-redux-weathercomponent/)
+
 In the project directory, you can run:
 
 ### `yarn start`
