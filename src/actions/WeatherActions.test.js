@@ -79,7 +79,7 @@ describe('actions', () => {
       }
     ]
 
-    return store.dispatch(actions.getWeather()).then(() => {
+    return store.dispatch(actions.getWeather('London')).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
     })
   })
@@ -106,7 +106,7 @@ describe('actions', () => {
       }
     ]
 
-    return store.dispatch(actions.getWeather()).then(() => {
+    return store.dispatch(actions.getWeather('London')).then(() => {
       expect(store.getActions()).toEqual(expectedActions)
     })
   })

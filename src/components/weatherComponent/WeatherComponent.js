@@ -8,21 +8,17 @@ export default class WeatherComponent extends React.Component {
   }
 
   render () {
-    if (this.props.weather.location && this.props.weather.temp) {
-      return (
-          <div>
-            <div className="weather-card">
-              <div className="weather-icon cloud"></div>
-              <h1 id="temp" className="temp">
-                {this.kelvinToCelcius(this.props.weather.temp)}º
-              </h1>
-              <br />
-              <p id="location">{this.props.weather.location}</p>
-            </div>
-          </div>
-      )
-    } else {
-      return null
-    }
+    const {weather} = this.props
+
+    return (
+        <div className="weather-card">
+          <div className="weather-icon cloud"></div>
+          <h1 id="temp" className="temp">
+            {this.kelvinToCelcius(weather.temp)}º
+          </h1>
+          <br />
+          <p id="location">{weather.location}</p>
+        </div>
+    )
   }
 }

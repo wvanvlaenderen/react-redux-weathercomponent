@@ -9,7 +9,7 @@ import { spy } from 'sinon'
 describe('app container', () => {
   const store = configureMockStore([thunk])({
     weatherReducer: {
-      weather: {}
+      locations: []
     }
   })
 

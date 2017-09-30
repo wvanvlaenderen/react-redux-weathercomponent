@@ -17,6 +17,7 @@ Array [
     },
     "thisValue": Object {
       "dispatch": [Function],
+      "locations": Array [],
       "store": Object {
         "clearActions": [Function],
         "dispatch": [Function],
@@ -44,8 +45,50 @@ Array [
         },
         "unsubscribe": [Function],
       },
-      "weatherReducer": Object {
-        "weather": Object {},
+    },
+  },
+  Object {
+    "args": Array [
+      Object {
+        "type": "fetching weather",
+      },
+    ],
+    "callId": 1,
+    "errorWithCallStack": [Error],
+    "exception": undefined,
+    "proxy": [Function],
+    "returnValue": Object {
+      "type": "fetching weather",
+    },
+    "thisValue": Object {
+      "dispatch": [Function],
+      "locations": Array [],
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "storeSubscription": Subscription {
+        "listeners": Object {
+          "clear": [Function],
+          "get": [Function],
+          "notify": [Function],
+          "subscribe": [Function],
+        },
+        "onStateChange": [Function],
+        "parentSub": undefined,
+        "store": Object {
+          "clearActions": [Function],
+          "dispatch": [Function],
+          "getActions": [Function],
+          "getState": [Function],
+          "replaceReducer": [Function],
+          "subscribe": [Function],
+        },
+        "unsubscribe": [Function],
       },
     },
   },

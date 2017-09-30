@@ -1,26 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Renders temperature in kelvin to celcius using snaphot testing 1`] = `
-<div>
+<div
+  className="weather-card"
+>
   <div
-    className="weather-card"
+    className="weather-icon cloud"
+  />
+  <h1
+    className="temp"
+    id="temp"
   >
-    <div
-      className="weather-icon cloud"
-    />
-    <h1
-      className="temp"
-      id="temp"
-    >
-      27
-      º
-    </h1>
-    <br />
-    <p
-      id="location"
-    >
-      london
-    </p>
-  </div>
+    27
+    º
+  </h1>
+  <br />
+  <p
+    id="location"
+  >
+    london
+  </p>
 </div>
 `;

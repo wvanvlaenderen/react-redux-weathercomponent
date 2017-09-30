@@ -9,7 +9,7 @@ import * as actions from './actions/WeatherActions'
 describe('app container', () => {
   const store = configureMockStore([thunk])({
     weatherReducer: {
-      weather: {}
+      locations: []
     }
   })
 

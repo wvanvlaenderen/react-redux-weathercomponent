@@ -5,22 +5,52 @@ describe('weather reducer', () => {
 
   it('should return the initial state', () => {
     expect(reducer(undefined, {})).toEqual({
-      weather: undefined
+      locations: []
     })
   })
 
   it('should handle GET_WEATHER_DONE', () => {
     expect(
-        reducer([], {
+        reducer({
+          locations: []
+        }, {
           type: types.GET_WEATHER_DONE,
           payload: {
             temp: 10
           }
         })
     ).toEqual({
-      weather: {
-        temp: 10
-      }
+      locations: [
+        {
+          temp: 10
+        }
+      ]
+    })
+  })
+
+  it('adds additional locations upon GET_WEATHER_DONE', () => {
+    expect(
+        reducer({
+          locations: [
+            {
+              temp: 10
+            }
+          ]
+        }, {
+          type: types.GET_WEATHER_DONE,
+          payload: {
+            temp: 20
+          }
+        })
+    ).toEqual({
+      locations: [
+        {
+          temp: 10
+        },
+        {
+          temp: 20
+        }
+      ]
     })
   })
 
